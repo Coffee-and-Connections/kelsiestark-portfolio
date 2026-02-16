@@ -1,70 +1,86 @@
 /* =========================================
    KELSIE E. STARK | GLOBAL PORTFOLIO STYLES
-   Theme: Gallery Noir (High-Contrast/Fine Art)
+   Theme: Gallery Noir (Horizontal Layout)
    ========================================= */
 
 :root {
     --bg: #0a0a0a;              /* Deep Gallery Black */
-    --paper: #fdf6e9;           /* SBR Match Cream */
     --accent: #d4af37;          /* Fine Art Gold */
     --text-main: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
     --border: rgba(255, 255, 255, 0.1);
-    --nav-width: 250px;
 }
 
 /* 1. GLOBAL DEFAULTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    display: flex; /* This creates the side-by-side layout */
-    margin: 0;
-    overflow-x: hidden; /* Prevents the horizontal scroll 'break' */
+    overflow-x: hidden;
+    display: block; /* Standard vertical flow */
 }
 
-/* 2. PERSISTENT SIDE NAVIGATION */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* 2. TOP HORIZONTAL NAVIGATION */
 .side-nav {
-    width: var(--nav-width); /* 250px */
-    height: 100vh;
-    padding: 3rem;
-    border-right: 1px solid var(--border);
+    width: 100%;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: fixed; /* Keeps it on the left while scrolling */
-    left: 0;
+    justify-content: center;
+    gap: 3rem;
+    position: sticky; /* Keeps it at the top when scrolling */
     top: 0;
-    background: var(--bg);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.side-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.side-nav a:hover, 
+.side-nav a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 /* 3. MAIN CONTENT WRAPPERS */
-.main-content, .hero-center, .content-area {
-    margin-left: var(--nav-width); /* Push content past the 250px sidebar */
-    width: calc(100% - var(--nav-width)); /* Take up ONLY the remaining space */
-    padding: 4rem;
-    display: block; /* Ensure it stays in the flow */
-}
-
-/* Special fix for the Home Page Hero */
-.hero-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    padding: 2rem;
+.main-content, .content-area {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers all content */
+    padding: 4rem 2rem;
 }
 
 /* 4. HERO SECTION (HOME PAGE) */
 .hero-center {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 90vh;
+    min-height: 60vh;
+    padding: 4rem 2rem;
 }
 
 .intro h1 { font-size: 4rem; margin-bottom: 0.5rem; }
@@ -77,8 +93,9 @@ body {
 .intro .voice { 
     font-style: italic; 
     opacity: 0.6; 
-    max-width: 500px; 
+    max-width: 600px; 
     margin: 1.5rem auto; 
+    font-size: 1.2rem;
 }
 
 /* 5. HUB HEADERS (POETRY & PHOTO PAGES) */
@@ -86,6 +103,7 @@ body {
     margin-bottom: 5rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 2rem;
+    text-align: center;
 }
 
 .hub-header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
@@ -94,8 +112,9 @@ body {
 /* 6. WORK GRID (BOOKS & PHOTOS) */
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    width: 100%;
 }
 
 .work-card {
@@ -105,32 +124,39 @@ body {
     transition: 0.4s ease;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevents image corners from poking out */
+    overflow: hidden;
+}
+
+.work-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
 }
 
 .work-media {
-    width: 100%;       /* Takes full width of the card */
-    aspect-ratio: 4/5; /* Forces a consistent "Portrait" shape */
+    width: 100%;
+    aspect-ratio: 4/5;
     background: #111;
-    overflow: hidden;  /* This is the 'Frame' that clips the photo */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .work-media img {
-    width: 100%;       /* Forces image to match frame width */
-    height: 100%;      /* Forces image to match frame height */
-    object-fit: cover; /* CROPS the photo to fit without stretching it */
-    object-position: center; /* Ensures the middle of the photo is always visible */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: 0.5s ease;
 }
 
 .work-card:hover .work-media img {
-    transform: scale(1.05); /* Adds a subtle "zoom" effect when hovering */
+    transform: scale(1.05);
 }
 
 /* 7. BUTTONS & ACTIONS */
+.cta-group { margin-top: 2rem; }
+
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -163,38 +189,24 @@ body {
     margin-right: 10px;
 }
 
-.btn-sm.secondary { border-color: #444; color: #888; }
-
-/* 8. RESIDENT FOOTER */
-.resident-footer {
-    position: fixed;
-    bottom: 2rem;
-    left: 3rem;
-    font-size: 0.65rem;
+/* 8. FOOTER */
+.bottom-footer {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.4;
-    max-width: 180px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
 }
 
-.resident-footer a { color: #fff; text-decoration: none; }
-.resident-footer a:hover { color: var(--accent); }
+.bottom-footer a { color: var(--text-main); text-decoration: underline; }
 
 /* 9. RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
-    .side-nav {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 2rem;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-        padding: 2rem;
-    }
+    .side-nav { gap: 1.5rem; padding: 1rem; }
+    .side-nav a { font-size: 0.65rem; letter-spacing: 1px; }
     .intro h1 { font-size: 2.5rem; }
+    .hub-header h1 { font-size: 2.5rem; }
 }
