@@ -14,61 +14,48 @@
 }
 
 /* 1. GLOBAL DEFAULTS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: var(--bg);
     color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    display: flex; /* Sidebar layout */
-    min-height: 100vh;
-}
-
-h1, h2, h3, .serif {
-    font-family: 'Playfair Display', serif;
+    display: flex; /* This creates the side-by-side layout */
+    margin: 0;
+    overflow-x: hidden; /* Prevents the horizontal scroll 'break' */
 }
 
 /* 2. PERSISTENT SIDE NAVIGATION */
 .side-nav {
-    width: var(--nav-width);
+    width: var(--nav-width); /* 250px */
     height: 100vh;
     padding: 3rem;
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    position: fixed;
-    z-index: 100;
+    position: fixed; /* Keeps it on the left while scrolling */
+    left: 0;
+    top: 0;
     background: var(--bg);
 }
 
-.side-nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.side-nav a:hover, 
-.side-nav a.active {
-    color: var(--accent);
-    padding-left: 5px;
-}
-
 /* 3. MAIN CONTENT WRAPPERS */
-.main-content {
-    margin-left: var(--nav-width);
-    width: calc(100% - var(--nav-width));
-    min-height: 100vh;
+.main-content, .hero-center, .content-area {
+    margin-left: var(--nav-width); /* Push content past the 250px sidebar */
+    width: calc(100% - var(--nav-width)); /* Take up ONLY the remaining space */
     padding: 4rem;
+    display: block; /* Ensure it stays in the flow */
+}
+
+/* Special fix for the Home Page Hero */
+.hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 2rem;
 }
 
 /* 4. HERO SECTION (HOME PAGE) */
