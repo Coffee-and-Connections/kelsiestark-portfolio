@@ -118,47 +118,30 @@ h1, h2, h3, .serif {
     transition: 0.4s ease;
     display: flex;
     flex-direction: column;
-}
-
-.work-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.04);
+    overflow: hidden; /* Prevents image corners from poking out */
 }
 
 .work-media {
-    aspect-ratio: 4/5;
+    width: 100%;       /* Takes full width of the card */
+    aspect-ratio: 4/5; /* Forces a consistent "Portrait" shape */
     background: #111;
+    overflow: hidden;  /* This is the 'Frame' that clips the photo */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .work-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;       /* Forces image to match frame width */
+    height: 100%;      /* Forces image to match frame height */
+    object-fit: cover; /* CROPS the photo to fit without stretching it */
+    object-position: center; /* Ensures the middle of the photo is always visible */
+    transition: 0.5s ease;
 }
 
-/* Professional Book Mockup Styles */
-.book-frame {
-    width: 180px;
-    height: 270px;
-    background: #1a1a1a;
-    box-shadow: 15px 15px 40px rgba(0,0,0,0.6);
-    border-left: 4px solid var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
+.work-card:hover .work-media img {
+    transform: scale(1.05); /* Adds a subtle "zoom" effect when hovering */
 }
-
-.work-info { padding: 2rem; }
-.work-info h3 { margin-bottom: 1rem; font-size: 1.5rem; }
-.work-info p { font-size: 0.95rem; color: var(--text-muted); }
 
 /* 7. BUTTONS & ACTIONS */
 .btn {
