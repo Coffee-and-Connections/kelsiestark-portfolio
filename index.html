@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelsie E. Stark | Fine Art & Poetry</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="gallery-theme">
@@ -13,23 +18,43 @@
         <a href="poetry/index.html">Poetry</a>
         <a href="photography/index.html">Photography</a>
         <a href="#contact">Contact</a>
+        
+        <div class="resident-footer-nav">
+             Resident Creative <br>
+             <a href="https://connectionsep.coffee" target="_blank">Strong Bonds Resilience</a>
+        </div>
     </nav>
 
-    <main class="hero-center">
-        <section class="intro">
-            <span class="tag">Veteran • Artist • Storyteller</span>
-            <h1>Kelsie E. Stark</h1>
-            <p class="voice">Capturing the raw resilience of the human spirit through the lens and the pen.</p>
-            <div class="cta-group">
-                <a href="photography/index.html" class="btn">View Visuals</a>
-                <a href="poetry/index.html" class="btn">Read Narratives</a>
+    <main class="main-content">
+        
+        <section class="hero-center">
+            <div class="intro">
+                <span class="tagline">Veteran • Artist • Storyteller</span>
+                <h1>Kelsie E. Stark</h1>
+                <p class="voice">Capturing the raw resilience of the human spirit through the lens and the pen.</p>
+                <div class="cta-group">
+                    <a href="photography/index.html" class="btn">View Visuals</a>
+                    <a href="poetry/index.html" class="btn">Read Narratives</a>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer class="resident-footer">
-        <p>Resident Creative at <a href="https://connectionsep.coffee">Coffee & Connections, EL Paso</a></p>
-    </footer>
+        <section id="about" style="padding: 4rem 0; border-top: 1px solid var(--border); display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="asset/kelsie_stark_img.jpeg" alt="Kelsie E. Stark" style="width: 100%; border-radius: 4px; filter: grayscale(1); box-shadow: 20px 20px 60px rgba(0,0,0,0.5);">
+            </div>
+            <div style="flex: 1.5; min-width: 300px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Art of Becoming</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1rem;">
+                    Kelsie E. Stark is a medically retired Army Veteran, fine-art photographer, and poet based in El Paso, Texas. 
+                </p>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">
+                    Her work explores the intersection of trauma and liberation, using visual and written narratives to document the strength found in vulnerability. As a Resident Creative for Strong Bonds Resilience, she captures the "industrial soul" of historic recovery.
+                </p>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
