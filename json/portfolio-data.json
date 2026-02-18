@@ -1,0 +1,18 @@
+[
+  {
+    "id": "white-sands-01",
+    "title": "The Alchemist of White Sands",
+    "category": "Environmental Portraiture",
+    "filename": "Kelsie-Photo3.jpg",
+    "description": "A high-contrast editorial study exploring the juxtaposition of human geometric tattoos against the fluid, organic lines of the New Mexico gypsum dunes.",
+    "tags": ["Editorial", "Desert", "Southwest"]
+  },
+  {
+    "id": "silhouette-01",
+    "title": "Vesper",
+    "category": "Fine Art",
+    "filename": "Kelsie-Photo_6.jpg",
+    "description": "A minimalist fine-art silhouette using a singular light source to define the human profile against lace textures.",
+    "tags": ["Noir", "Fine Art", "Silhouette"]
+  }
+]
