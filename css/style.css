@@ -1,6 +1,7 @@
 /* =========================================
    KELSIE E. STARK | GLOBAL PORTFOLIO STYLES
    Theme: Gallery Noir (Horizontal Layout)
+   Architecture: Modular / Data-Driven
    ========================================= */
 
 :root {
@@ -24,7 +25,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    display: block; /* Standard vertical flow */
+    display: block;
 }
 
 h1, h2, h3 {
@@ -39,7 +40,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    position: sticky; /* Keeps it at the top when scrolling */
+    position: sticky;
     top: 0;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
@@ -68,7 +69,7 @@ h1, h2, h3 {
 .main-content, .content-area {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centers all content */
+    margin: 0 auto;
     padding: 4rem 2rem;
 }
 
@@ -125,6 +126,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 .work-card:hover {
@@ -154,6 +156,31 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
+/* NEW: Dynamic Info Styles for JSON content */
+.work-info {
+    padding: 1.5rem;
+}
+
+.category-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.work-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.work-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
 /* 7. BUTTONS & ACTIONS */
 .cta-group { margin-top: 2rem; }
 
@@ -168,7 +195,6 @@ h1, h2, h3 {
     letter-spacing: 2px;
     font-size: 0.8rem;
     transition: 0.3s;
-    margin: 10px;
 }
 
 .btn:hover {
@@ -176,21 +202,8 @@ h1, h2, h3 {
     color: #000;
 }
 
-.btn-sm {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-top: 1.5rem;
-    margin-right: 10px;
-}
-
 /* 8. FOOTER */
-.bottom-footer {
+.bottom-footer, .resident-footer {
     width: 100%;
     text-align: center;
     padding: 4rem 2rem;
@@ -201,12 +214,21 @@ h1, h2, h3 {
     color: var(--text-muted);
 }
 
-.bottom-footer a { color: var(--text-main); text-decoration: underline; }
+.bottom-footer a, .resident-footer a { 
+    color: var(--text-main); 
+    text-decoration: underline; 
+}
 
-/* 9. RESPONSIVE DESIGN */
+/* 9. ANIMATIONS & RESPONSIVE */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
     .side-nav { gap: 1.5rem; padding: 1rem; }
     .side-nav a { font-size: 0.65rem; letter-spacing: 1px; }
     .intro h1 { font-size: 2.5rem; }
     .hub-header h1 { font-size: 2.5rem; }
+    .work-grid { gap: 1.5rem; }
 }
