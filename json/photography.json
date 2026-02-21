@@ -2,14 +2,14 @@
   {
     "title": "Environmental Portraiture",
     "category": "Fine Art",
-    "image": "asset/photography/white-sands-main.jpg",
+    "image": "/asset/photography/white-sands-main.jpg",
     "description": "Explorations of the human form within the vast white sands of the Borderplex.",
     "link": "galleries/environmental.html"
   },
   {
     "title": "Sensory Storytelling",
     "category": "Documentary",
-    "image": "asset/photography/sensory-main.jpg",
+    "image": "/asset/photography/sensory-main.jpg",
     "description": "Capturing the textures and emotions of lived experiences.",
     "link": "galleries/sensory.html"
   }
