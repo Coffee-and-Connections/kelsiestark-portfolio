@@ -1,30 +1,31 @@
-# Kelsie E. Stark | Fine Art & Poetry
-**Official Portfolio: [https://kelsiestrark.com](https://kelsiestark.com)**
+# Kelsie E. Stark | Fine Art & Poetry Portfolio
+**Live Site:** [https://kelsiestark.com](https://kelsiestark.com)
 
-## The Vision
-This portfolio was hand-coded by the **Coffee & Connections El Paso Team** as a gift of mutual support. It is a dedicated professional sanctuary for visual and written narratives—moving beyond the limitations of "link-in-bio" tools and into a high-performance, minimalist home for your creative legacy.
+## 🖋️ The Vision
+A high-performance, minimalist digital sanctuary designed to showcase the intersection of trauma, resilience, and liberation. This portfolio serves as the professional home for Kelsie E. Stark's visual and written narratives.
 
-## Features
-- **Gallery Noir Aesthetic:** A high-contrast, "Industrial Soul" design optimized for fine-art photography.
-- **Data-Driven Architecture:** Poetry and Photography sections are powered by JSON engines, making it easy to add new books or photo galleries without touching complex code.
-- **Professional Domain:** Fully integrated with `kelsiestrark.com` via Namecheap and GitHub Pages.
-- **Trauma-Informed Design:** Built with the same intentionality as the Strong Bonds Resilience projects.
+## 🛠️ Architecture
+This site is built with a **Data-Driven Engine**. Instead of editing complex HTML to add content, the site "reads" from JSON files.
 
-## Project Structure
-- `/poetry`: Contains the literary showcase engine.
-- `/photography`: Contains the visual narrative engine.
-- `/json`: The "Brain" of the site. Update `books.json` or `photography.json` to add new content.
-- `/asset`: Storage for book covers and photography catalogs.
+- **Root Structure:** All core folders (`/json`, `/java`, `/css`, `/asset`) reside at the top level to ensure stable paths across the custom domain.
+- **Poetry Engine:** Powered by `/java/books.js` and `/json/books.json`.
+- **Photography Engine:** Powered by `/java/photography.js` and `/json/photography.json`.
+- **Hosting:** Deployed via GitHub Pages with a custom CNAME configuration.
 
-## The Connection
-At the base of this site is a permanent backlink to the **Strong Bonds Resilience Sanctuary**. This link represents our shared commitment to the veteran community and survivor advocacy in the El Paso Borderplex.
+## 🚀 Maintenance Guide
 
-## Maintenance & Deployment
-This site is hosted via **GitHub Pages** and secured with **Enforce HTTPS**.
+### To Add a New Book:
+1. Upload the cover image to `/asset/book/`.
+2. Open `/json/books.json`.
+3. Copy an existing entry and update the `title`, `image` path, and `description`.
 
-### Adding New Content
-1. **To add a Book:** Upload the cover to `/asset/book/` and add the details to `/json/books.json`.
-2. **To add a Photography Catalog:** Upload the lead image to `/asset/photography/` and update `/json/photography.json`.
+### To Add a New Photography Gallery:
+1. Upload the lead image to `/asset/photography/`.
+2. Open `/json/photography.json`.
+3. Add a new entry with the `link` to the specific gallery collection.
+
+## 🤝 The Connection
+This project features a permanent backlink to **Strong Bonds Resilience**, representing a shared commitment to survivor advocacy and veteran support within the El Paso Borderplex.
 
 ---
-*Developed with purpose by the Coffee & Connections El Paso Tech Team (2026).*
+*Hand-coded with purpose by the Coffee & Connections El Paso Tech Team (2026).*
