@@ -1,18 +1,16 @@
 [
   {
-    "id": "white-sands-01",
-    "title": "The Alchemist of White Sands",
-    "category": "Environmental Portraiture",
-    "image": "../asset/Kelsie-Photo3.jpg", 
-    "description": "A high-contrast editorial study exploring the juxtaposition of human geometric tattoos against the fluid, organic lines of the New Mexico gypsum dunes.",
-    "tags": ["Editorial", "Desert", "Southwest"]
+    "title": "Environmental Portraiture",
+    "category": "Fine Art",
+    "image": "asset/photography/white-sands-main.jpg",
+    "description": "Explorations of the human form within the vast white sands of the Borderplex.",
+    "link": "galleries/environmental.html"
   },
   {
-    "id": "silhouette-01",
-    "title": "Vesper",
-    "category": "Fine Art",
-    "image": "../asset/Kelsie-Photo_6.jpg",
-    "description": "A minimalist fine-art silhouette using a singular light source to define the human profile against lace textures.",
-    "tags": ["Noir", "Fine Art", "Silhouette"]
+    "title": "Sensory Storytelling",
+    "category": "Documentary",
+    "image": "asset/photography/sensory-main.jpg",
+    "description": "Capturing the textures and emotions of lived experiences.",
+    "link": "galleries/sensory.html"
   }
 ]
