@@ -1,32 +1,20 @@
 [
   {
-    "id": "book-free-01",
     "title": "I Will Be Free",
-    "status": "Available Now",
-    "category": "Poetry Collection",
-    "image": "../asset/book-free-cover.jpg",
-    "description": "A vulnerable exploration of love, loss, and the journey toward personal liberation. This collection serves as a roadmap for finding light in the aftermath of shadow.",
-    "buyUrl": "https://buy.stripe.com/example-link",
-    "previewUrl": "#"
+    "year": "2023",
+    "image": "asset/book/i-will-be-free.webp",
+    "description": "A collection exploring the breaking of chains and the journey toward personal liberation."
   },
   {
-    "id": "book-unspoken-02",
     "title": "Unspoken",
-    "status": "Limited Edition",
-    "category": "Selected Works",
-    "image": "../asset/book-unspoken-cover.jpg",
-    "description": "Finding the voice that trauma tried to silence. A collection focused on the power of naming one's truth and reclaiming the narrative of one's life.",
-    "buyUrl": "https://buy.stripe.com/example-link",
-    "previewUrl": "#"
+    "year": "2022",
+    "image": "asset/book/unspoken.jpeg",
+    "description": "Giving voice to the quiet moments of survival that often go unheard."
   },
   {
-    "id": "book-overland-03",
-    "title": "The Overland Project",
-    "status": "In Development",
-    "category": "Architectural Narrative",
-    "image": "", 
-    "description": "A forthcoming collection documenting the sensory and emotional restoration of the historic Lenox building through verse and industrial photography.",
-    "buyUrl": "",
-    "previewUrl": "#"
+    "title": "You",
+    "year": "2021",
+    "image": "asset/book/you.jpeg",
+    "description": "An intimate exploration of identity and the reflections we find in others."
   }
 ]
