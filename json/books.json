@@ -2,19 +2,19 @@
   {
     "title": "I Will Be Free",
     "year": "2023",
-    "image": "asset/books/i-will-be-free.webp",
+    "image": "/asset/book/i-will-be-free.webp",
     "description": "A collection exploring the breaking of chains and the journey toward personal liberation."
   },
   {
     "title": "Unspoken",
     "year": "2022",
-    "image": "asset/books/unspoken.jpeg",
+    "image": "/asset/book/unspoken.jpeg",
     "description": "Giving voice to the quiet moments of survival that often go unheard."
   },
   {
     "title": "You",
     "year": "2021",
-    "image": "asset/books/you.jpeg",
+    "image": "/asset/book/you.jpeg",
     "description": "An intimate exploration of identity and the reflections we find in others."
   }
 ]
