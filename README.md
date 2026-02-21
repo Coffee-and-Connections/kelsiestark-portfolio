@@ -1,5 +1,5 @@
 # Kelsie E. Stark | Fine Art & Poetry
-**Official Portfolio: [https://kelsiestrark.com](https://kelsiestrark.com)**
+**Official Portfolio: [https://kelsiestrark.com](https://kelsiestark.com)**
 
 ## The Vision
 This portfolio was hand-coded by the **Coffee & Connections El Paso Team** as a gift of mutual support. It is a dedicated professional sanctuary for visual and written narratives—moving beyond the limitations of "link-in-bio" tools and into a high-performance, minimalist home for your creative legacy.
