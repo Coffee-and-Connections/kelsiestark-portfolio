@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('article');
                 card.className = 'work-card';
 
-                // Handle "Coming Soon" covers
+                // Handle "Coming Soon" covers vs Actual Images
                 const mediaContent = book.image 
                     ? `<img src="${book.image}" alt="${book.title}" loading="lazy">`
                     : `<div class="cover-placeholder">
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                        </div>`;
 
                 card.innerHTML = `
-                    <div class="work-media">
+                    <div class="work-media book-media">
                         ${mediaContent}
                     </div>
                     <div class="work-info">
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3>${book.title}</h3>
                         <p>${book.description}</p>
                         <div class="work-actions">
-                            ${book.buyUrl ? `<a href="${book.buyUrl}" class="btn-sm">Purchase</a>` : ''}
+                            ${book.buyUrl ? `<a href="${book.buyUrl}" class="btn-sm" target="_blank">Purchase</a>` : ''}
                             ${book.previewUrl ? `<a href="${book.previewUrl}" class="btn-sm secondary">Preview</a>` : ''}
                         </div>
                     </div>
