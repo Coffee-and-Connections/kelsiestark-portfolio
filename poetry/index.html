@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poetry & Publications | Kelsie E. Stark</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="gallery-theme">
-
     <nav class="side-nav">
         <div class="nav-brand">KES</div>
-        <a href="../index.html">Home</a>
-        <a href="index.html" class="active">Poetry</a>
-        <a href="../photography/index.html">Photography</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="/index.html">Home</a>
+        <a href="/poetry/index.html" class="active">Poetry</a>
+        <a href="/photography/index.html">Photography</a>
+        <a href="/index.html#contact">Contact</a>
     </nav>
 
-    <main class="content-area">
+    <main class="content-area"> 
         <header class="hub-header">
             <span class="category-tag">The Written Word</span>
             <h1>Poetry & Publications</h1>
@@ -29,7 +26,9 @@
         </header>
 
         <section id="books-grid" class="work-grid" data-json-path="/json/books.json">
-            <div class="loader">Gathering the narratives...</div>
+            <div class="loader" style="grid-column: 1/-1; text-align: center; opacity: 0.5; font-style: italic;">
+                Gathering the narratives...
+            </div>
         </section>
     </main>
 
@@ -40,4 +39,3 @@
     <script src="/java/books.js"></script>
 </body>
 </html>
-
