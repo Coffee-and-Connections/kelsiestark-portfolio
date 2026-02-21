@@ -1,16 +1,30 @@
 [
   {
-    "title": "Environmental Portraiture",
-    "category": "Fine Art",
-    "image": "/asset/photography/white-sands-main.jpg",
-    "description": "Explorations of the human form within the vast white sands of the Borderplex.",
-    "link": "galleries/environmental.html"
+    "title": "Industrial Resurgence",
+    "category": "Building Documentation",
+    "image": "/asset/Kelsie-Photo3.jpg",
+    "description": "Documenting the historic transformation and industrial soul of Strong Bonds Resilience.",
+    "link": "#"
   },
   {
-    "title": "Sensory Storytelling",
-    "category": "Documentary",
-    "image": "/asset/photography/sensory-main.jpg",
-    "description": "Capturing the textures and emotions of lived experiences.",
-    "link": "galleries/sensory.html"
+    "title": "Ethereal Obscura",
+    "category": "Fine Art Silhouette",
+    "image": "/asset/Kelsie-Photo_6.jpg",
+    "description": "An exploration of shadow and light, capturing the spirit through veiled form.",
+    "link": "#"
+  },
+  {
+    "title": "Environmental Portraiture",
+    "category": "Portraits",
+    "image": "/asset/Kelsie-Photo_4.jpg",
+    "description": "Raw, emotive connections captured within the unique landscapes of the Borderplex.",
+    "link": "#"
+  },
+  {
+    "title": "Sensory Narratives",
+    "category": "Conceptual",
+    "image": "/asset/Kelsie-Photo_5.jpg",
+    "description": "Visual storytelling that moves beyond sight to capture lived experience.",
+    "link": "#"
   }
 ]
