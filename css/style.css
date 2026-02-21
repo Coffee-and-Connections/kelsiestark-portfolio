@@ -40,10 +40,11 @@ img {
 /* 2. TOP HORIZONTAL NAVIGATION */
 .side-nav {
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.5rem 5%; /* Added 5% side padding */
     border-bottom: 1px solid var(--border);
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Change to space-between if you want brand left/links right */
+    align-items: center;
     gap: 3rem;
     position: sticky;
     top: 0;
@@ -73,12 +74,12 @@ img {
 /* 3. MAIN CONTENT WRAPPERS */
 .content-area {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px; /* Slightly wider for gallery flow */
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4rem 8%; /* Increased side padding to 8% to keep words off the edges */
 }
 
-/* 4. HUB HEADERS (POETRY & PHOTO PAGES) */
+/* 4. HUB HEADERS */
 .hub-header {
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--border);
@@ -88,7 +89,13 @@ img {
 
 .hub-header h1 { 
     font-size: clamp(2.5rem, 5vw, 3.5rem); 
-    margin-bottom: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.hub-header .subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-muted);
 }
 
 .category-tag {
@@ -103,9 +110,14 @@ img {
 /* 5. WORK GRID (BOOKS & PHOTOS) */
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 4rem;
     width: 100%;
+}
+
+/* Specifically for Photography to prevent giant images */
+.photography-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .work-card {
@@ -125,7 +137,7 @@ img {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Media handling for Books (Vertical 2:3 ratio) */
+/* Media handling - Vertical 2:3 for Books */
 .work-media {
     width: 100%;
     aspect-ratio: 2 / 3; 
@@ -135,15 +147,20 @@ img {
     border-bottom: 1px solid var(--border);
 }
 
+/* Specific class for Photography photos (usually 1:1 or 4:5) */
+.photo-media {
+    aspect-ratio: 1 / 1; 
+}
+
 .work-media img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* This is key: it fills the box without stretching */
     transition: 0.6s ease;
 }
 
 .work-card:hover .work-media img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 /* 6. INFO STYLES */
@@ -168,7 +185,7 @@ img {
 .resident-footer {
     width: 100%;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4rem 8%;
     border-top: 1px solid var(--border);
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -190,11 +207,11 @@ img {
 
 @media (max-width: 768px) {
     .side-nav { 
-        gap: 1rem; 
-        padding: 1rem; 
-        flex-wrap: wrap; 
+        gap: 1.5rem; 
+        padding: 1rem 5%; 
     }
-    .side-nav a { font-size: 0.7rem; letter-spacing: 1px; }
-    .content-area { padding: 2rem 1rem; }
+    .side-nav a { font-size: 0.65rem; letter-spacing: 1.5px; }
+    .content-area { padding: 3rem 5%; } /* Slightly less padding on mobile */
     .hub-header h1 { font-size: 2.2rem; }
+    .work-grid { gap: 2rem; }
 }
