@@ -14,28 +14,29 @@
 <body class="gallery-theme">
 
     <nav class="side-nav">
+        <div class="nav-brand">KES</div>
         <a href="../index.html">Home</a>
         <a href="../poetry/index.html">Poetry</a>
         <a href="index.html" class="active">Photography</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
 
-    <main class="main-content">
+    <main class="content-area"> 
         <header class="hub-header">
-            <span class="tagline">The Lens</span>
+            <span class="category-tag">The Lens</span>
             <h1>Visual Narratives</h1>
             <p class="subtitle">Fine art portraiture and sensory storytelling from the heart of the Borderplex.</p>
         </header>
 
-        <section id="portfolio-grid" class="work-grid" data-json-path="../json/photography.json">
-            <p style="grid-column: 1/-1; text-align: center; opacity: 0.5; font-style: italic;">
+        <section id="portfolio-grid" class="work-grid photography-grid" data-json-path="../json/photography.json">
+            <div class="loader" style="grid-column: 1/-1; text-align: center; opacity: 0.5; font-style: italic;">
                 Loading the Visual Narratives...
-            </p>
+            </div>
         </section>
     </main>
 
     <footer class="resident-footer">
-        <p>Resident Creative at <a href="https://connectionsep.coffee">Strong Bonds Resilience</a></p>
+        <p>&copy; 2026 Kelsie E. Stark | Resident Creative at <a href="https://connectionsep.coffee" target="_blank">Strong Bonds Resilience</a></p>
     </footer>
 
     <script src="../java/photography.js"></script>
