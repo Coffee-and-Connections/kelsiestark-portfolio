@@ -10,6 +10,7 @@
     --text-main: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
     --border: rgba(255, 255, 255, 0.1);
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* 1. GLOBAL DEFAULTS */
@@ -25,11 +26,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    display: block;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 /* 2. TOP HORIZONTAL NAVIGATION */
@@ -54,7 +59,7 @@ h1, h2, h3 {
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    transition: 0.3s ease;
+    transition: var(--transition);
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
 }
@@ -66,55 +71,40 @@ h1, h2, h3 {
 }
 
 /* 3. MAIN CONTENT WRAPPERS */
-.main-content, .content-area {
+.content-area {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
-/* 4. HERO SECTION (HOME PAGE) */
-.hero-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 60vh;
-    padding: 4rem 2rem;
-}
-
-.intro h1 { font-size: 4rem; margin-bottom: 0.5rem; }
-.intro .tagline { 
-    text-transform: uppercase; 
-    letter-spacing: 4px; 
-    font-size: 0.9rem; 
-    color: var(--accent);
-}
-.intro .voice { 
-    font-style: italic; 
-    opacity: 0.6; 
-    max-width: 600px; 
-    margin: 1.5rem auto; 
-    font-size: 1.2rem;
-}
-
-/* 5. HUB HEADERS (POETRY & PHOTO PAGES) */
+/* 4. HUB HEADERS (POETRY & PHOTO PAGES) */
 .hub-header {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 2rem;
     text-align: center;
 }
 
-.hub-header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
-.hub-header .subtitle { color: var(--text-muted); font-size: 1.2rem; }
+.hub-header h1 { 
+    font-size: clamp(2.5rem, 5vw, 3.5rem); 
+    margin-bottom: 0.5rem; 
+}
 
-/* 6. WORK GRID (BOOKS & PHOTOS) */
+.category-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* 5. WORK GRID (BOOKS & PHOTOS) */
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
     width: 100%;
 }
 
@@ -122,7 +112,7 @@ h1, h2, h3 {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
     border-radius: 4px;
-    transition: 0.4s ease;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -131,135 +121,51 @@ h1, h2, h3 {
 
 .work-card:hover {
     border-color: var(--accent);
-    transform: translateY(-8px);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
 }
 
+/* Media handling for Books (Vertical 2:3 ratio) */
 .work-media {
     width: 100%;
-    aspect-ratio: 4/5;
+    aspect-ratio: 2 / 3; 
     background: #111;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--border);
 }
 
 .work-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: 0.5s ease;
+    transition: 0.6s ease;
 }
 
 .work-card:hover .work-media img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
-/* 6a. PLACEHOLDER & EMPTY STATES (For Books) */
-.cover-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* 6. INFO STYLES */
+.work-info {
     padding: 2rem;
     text-align: center;
-    background: linear-gradient(45deg, #111, #1a1a1a);
-    border: 1px inset var(--border);
-}
-
-.placeholder-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-}
-
-.coming-soon {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.4;
-}
-
-/* 7. DYNAMIC INFO STYLES */
-.work-info {
-    padding: 1.5rem;
-}
-
-.category-tag {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 0.5rem;
 }
 
 .work-info h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
-}
-
-.work-info p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-}
-
-.work-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 1.2rem;
-}
-
-/* 8. BUTTONS & ACTIONS */
-.cta-group { margin-top: 2rem; }
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: var(--accent);
-    color: #000;
-}
-
-.btn-sm {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.btn-sm.secondary {
-    background: transparent;
-    border-color: rgba(255,255,255,0.2);
-    color: var(--text-muted);
-}
-
-.btn-sm.secondary:hover {
-    border-color: var(--text-main);
     color: var(--text-main);
 }
 
-/* 9. FOOTER */
-.bottom-footer, .resident-footer {
+.work-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 7. FOOTER */
+.resident-footer {
     width: 100%;
     text-align: center;
     padding: 4rem 2rem;
@@ -270,22 +176,25 @@ h1, h2, h3 {
     color: var(--text-muted);
 }
 
-.bottom-footer a, .resident-footer a { 
+.resident-footer a { 
     color: var(--text-main); 
-    text-decoration: underline; 
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
 }
 
-/* 10. ANIMATIONS & RESPONSIVE */
+/* 8. ANIMATIONS & RESPONSIVE */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-    .side-nav { gap: 1.5rem; padding: 1rem; }
-    .side-nav a { font-size: 0.65rem; letter-spacing: 1px; }
-    .intro h1 { font-size: 2.5rem; }
-    .hub-header h1 { font-size: 2.5rem; }
-    .work-grid { gap: 1.5rem; }
-    .work-actions { flex-direction: column; }
+    .side-nav { 
+        gap: 1rem; 
+        padding: 1rem; 
+        flex-wrap: wrap; 
+    }
+    .side-nav a { font-size: 0.7rem; letter-spacing: 1px; }
+    .content-area { padding: 2rem 1rem; }
+    .hub-header h1 { font-size: 2.2rem; }
 }
