@@ -40,7 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolioGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--accent);">Unable to load Visual Narratives. (Check: ${jsonPath})</p>`;
         });
 });
-            console.error('Error loading portfolio:', error);
-            portfolioGrid.innerHTML = '<p>Error loading gallery. Please try again later.</p>';
-        });
-});
