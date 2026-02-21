@@ -1,19 +1,30 @@
 # Kelsie E. Stark | Fine Art & Poetry
+**Official Portfolio: [https://kelsiestrark.com](https://kelsiestrark.com)**
 
 ## The Vision
-This portfolio was hand-coded by the **Coffee & Connections El Paso Team** as a gift of mutual support. It is designed to be a high-performance, minimalist home for your visual and written narratives—moving beyond the limitations of "link-in-bio" tools and into a dedicated professional space.
+This portfolio was hand-coded by the **Coffee & Connections El Paso Team** as a gift of mutual support. It is a dedicated professional sanctuary for visual and written narratives—moving beyond the limitations of "link-in-bio" tools and into a high-performance, minimalist home for your creative legacy.
 
 ## Features
-- **Gallery Noir Aesthetic:** Optimized for fine-art photography.
-- **Literary Showcase:** Dedicated sections for your published works (*I Will Be Free*, *Unspoken*).
-- **SEO Optimized:** Built to help your name rank higher on Google search results.
-- **Mobile First:** Designed to look stunning on every device.
+- **Gallery Noir Aesthetic:** A high-contrast, "Industrial Soul" design optimized for fine-art photography.
+- **Data-Driven Architecture:** Poetry and Photography sections are powered by JSON engines, making it easy to add new books or photo galleries without touching complex code.
+- **Professional Domain:** Fully integrated with `kelsiestrark.com` via Namecheap and GitHub Pages.
+- **Trauma-Informed Design:** Built with the same intentionality as the Strong Bonds Resilience projects.
+
+## Project Structure
+- `/poetry`: Contains the literary showcase engine.
+- `/photography`: Contains the visual narrative engine.
+- `/json`: The "Brain" of the site. Update `books.json` or `photography.json` to add new content.
+- `/asset`: Storage for book covers and photography catalogs.
 
 ## The Connection
 At the base of this site is a permanent backlink to the **Strong Bonds Resilience Sanctuary**. This link represents our shared commitment to the veteran community and survivor advocacy in the El Paso Borderplex.
 
-## Deployment
-This repository is ready for **GitHub Pages**. 
-1. Go to **Settings** > **Pages**.
-2. Select the `main` branch.
-3. Your site will be live at `kelsiestark.github.io`.
+## Maintenance & Deployment
+This site is hosted via **GitHub Pages** and secured with **Enforce HTTPS**.
+
+### Adding New Content
+1. **To add a Book:** Upload the cover to `/asset/book/` and add the details to `/json/books.json`.
+2. **To add a Photography Catalog:** Upload the lead image to `/asset/photography/` and update `/json/photography.json`.
+
+---
+*Developed with purpose by the Coffee & Connections El Paso Tech Team (2026).*
