@@ -7,24 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioGrid = document.getElementById('portfolio-grid');
     if (!portfolioGrid) return;
 
-    const jsonPath = portfolioGrid.dataset.jsonPath || '../json/photography.json';
+    // Use an absolute path to ensure it works on the custom domain
+    const jsonPath = "/json/photography.json"; 
 
     fetch(jsonPath)
         .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
+            if (!response.ok) throw new Error('404: File not found');
             return response.json();
         })
         .then(data => {
             portfolioGrid.innerHTML = ''; 
-
             data.forEach(item => {
-                // We create the article, but we'll put the link INSIDE or AROUND it
                 const card = document.createElement('article');
                 card.className = 'work-card';
-
-                // This wraps the image and text so the WHOLE card is a clickable catalog
                 card.innerHTML = `
-                    <a href="${item.link || '#'}" style="text-decoration: none; color: inherit;">
+                    <a href="${item.link || '#'}" class="catalog-link">
                         <div class="work-media photo-media">
                             <img src="${item.image}" alt="${item.title}" loading="lazy">
                         </div>
@@ -39,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(error => {
-            console.error('Error loading portfolio:', error);
-            portfolioGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Error loading gallery. Please check your JSON file.</p>';
+            console.error('Photography Error:', error);
+            portfolioGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--accent);">Unable to load Visual Narratives. (Check: ${jsonPath})</p>`;
         });
 });
             console.error('Error loading portfolio:', error);
