@@ -1,12 +1,12 @@
 /* =========================================
-   KELSIE E. STARK | GLOBAL PORTFOLIO STYLES
-   Theme: Gallery Noir (Horizontal Layout)
-   Architecture: Modular / Data-Driven
+    KELSIE E. STARK | GLOBAL PORTFOLIO STYLES
+    Theme: Gallery Noir
+    Architecture: Modular / Root-Relative
    ========================================= */
 
 :root {
-    --bg: #0a0a0a;              /* Deep Gallery Black */
-    --accent: #d4af37;          /* Fine Art Gold */
+    --bg: #0a0a0a;
+    --accent: #d4af37;
     --text-main: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
     --border: rgba(255, 255, 255, 0.1);
@@ -37,10 +37,10 @@ img {
     display: block;
 }
 
-/* 2. TOP HORIZONTAL NAVIGATION */
+/* 2. NAVIGATION */
 .side-nav {
     width: 100%;
-    padding: 1.5rem 8% !important; /* Forces padding to align with content */
+    padding: 1.5rem 10% !important;
     border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: center;
@@ -71,17 +71,16 @@ img {
     border-bottom: 2px solid var(--accent);
 }
 
-/* 3. MAIN CONTENT WRAPPERS (THE PADDING FIX) */
-/* This targets both classes to ensure the 8% padding always works */
+/* 3. LAYOUT CONTAINERS */
 .content-area, 
 .main-content {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 4rem 10% !important; /* Increased to 10% for clear breathing room */
+    padding: 4rem 10% !important;
 }
 
-/* 4. HUB HEADERS */
+/* 4. HEADERS */
 .hub-header {
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--border);
@@ -94,24 +93,32 @@ img {
     margin-bottom: 1rem; 
 }
 
-.hub-header .subtitle {
+.category-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
     max-width: 700px;
     margin: 0 auto;
     color: var(--text-muted);
 }
 
-/* 5. WORK GRID (THE GIANT IMAGE FIX) */
+/* 5. WORK GRID SYSTEM */
 .work-grid {
     display: grid;
-    /* Force 3 columns on larger screens to keep items sized correctly */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns for desktop */
     gap: 4rem;
     width: 100%;
 }
 
-/* Prevents photography cards from getting too wide */
+/* Special class for Catalog/Main Hubs */
 .photography-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .work-card {
@@ -127,13 +134,15 @@ img {
     color: inherit;
 }
 
+/* Makes entire card clickable for Photography categories */
 .work-card:hover {
     border-color: var(--accent);
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
 }
 
-/* Media handling - Aspect Ratios */
+/* 6. MEDIA & RATIOS */
 .work-media {
     width: 100%;
     background: #111;
@@ -142,18 +151,22 @@ img {
     border-bottom: 1px solid var(--border);
 }
 
-/* These force the shape regardless of original photo size */
-.book-media { aspect-ratio: 2 / 3; }    /* Tall vertical */
-.photo-media { aspect-ratio: 4 / 6; }   /* Classic portrait */
+.book-media { aspect-ratio: 2 / 3; }
+.photo-media { aspect-ratio: 4 / 6; }
 
 .work-media img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This stops stretching/giant sizes */
+    object-fit: cover;
     transition: 0.6s ease;
 }
 
-/* 6. INFO STYLES */
+.work-card:hover .work-media img {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+/* 7. INFO TEXT */
 .work-info {
     padding: 1.5rem;
     text-align: center;
@@ -171,8 +184,8 @@ img {
     line-height: 1.5;
 }
 
-/* 7. FOOTER */
-.resident-footer {
+/* 8. FOOTER */
+.resident-footer, .bottom-footer {
     width: 100%;
     text-align: center;
     padding: 4rem 10%;
@@ -183,18 +196,24 @@ img {
     color: var(--text-muted);
 }
 
-/* 8. ANIMATIONS & RESPONSIVE */
+.resident-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* 9. RESPONSIVE ENGINE */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 1024px) {
-    .work-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1100px) {
+    .work-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 }
 
 @media (max-width: 768px) {
     .side-nav { gap: 1rem; padding: 1rem 5% !important; flex-wrap: wrap; }
     .content-area, .main-content { padding: 3rem 5% !important; }
-    .work-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .work-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hub-header h1 { font-size: 2rem; }
 }
