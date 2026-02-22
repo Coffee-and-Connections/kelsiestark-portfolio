@@ -13,7 +13,31 @@
     "categoryDesc": "An exploration of shadow and light.",
     "title": "Spirit Veiled",
     "image": "/asset/silhouette.jpg",
-    "description": "Fine art silhouette study."
+    "description": "Fine art silhouette study exploring form and shadow."
+  },
+  {
+    "galleryID": "ethereal",
+    "categoryLabel": "Ethereal Obscura",
+    "categoryDesc": "An exploration of shadow and light.",
+    "title": "Primal Element",
+    "image": "/asset/woman-fire.jpg",
+    "description": "A study of heat, light, and human presence."
+  },
+  {
+    "galleryID": "ethereal",
+    "categoryLabel": "Ethereal Obscura",
+    "categoryDesc": "An exploration of shadow and light.",
+    "title": "Obscured Reflection",
+    "image": "/asset/woman-fog-mirror.jpg",
+    "description": "Exploring the boundary between clarity and haze."
+  },
+  {
+    "galleryID": "ethereal",
+    "categoryLabel": "Ethereal Obscura",
+    "categoryDesc": "An exploration of shadow and light.",
+    "title": "The Unknown",
+    "image": "/asset/woman-ufo.jpg",
+    "description": "Conceptual exploration of light and mystery."
   },
   {
     "galleryID": "portraits",
@@ -46,6 +70,22 @@
     "title": "Stardust",
     "image": "/asset/stars-on-face.jpg",
     "description": "A study of celestial ornamentation and piercing gaze."
+  },
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "Coastal Stillness",
+    "image": "/asset/woman-beach.jpg",
+    "description": "Finding peace at the ocean's edge."
+  },
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "The Inlet",
+    "image": "/asset/woman-by-sea-2.jpg",
+    "description": "Exploring the rugged coastline through portraiture."
   },
   {
     "galleryID": "intimacy",
@@ -99,9 +139,25 @@
     "galleryID": "sensory",
     "categoryLabel": "Sensory Narratives",
     "categoryDesc": "Visual storytelling moving beyond sight.",
-    "title": "Organic Harvest II",
-    "image": "/asset/carrots-on-back.jpg",
-    "description": "The weight of nature: A conceptual postural study."
+    "title": "Strawberry Steps",
+    "image": "/asset/strawberries-on-shoe.jpg",
+    "description": "A study of unexpected contrast and sweetness."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Organic Adornment",
+    "image": "/asset/strawberries-on-hip.jpg",
+    "description": "Exploring the body as a landscape for natural elements."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Floral Immersion",
+    "image": "/asset/woman-flowers-2.jpg",
+    "description": "A study of scent, touch, and blooming vulnerability."
   },
   {
     "galleryID": "publications",
@@ -190,5 +246,29 @@
     "title": "Supplication",
     "image": "/asset/adult-kneeling-woman-topless.jpg",
     "description": "An intimate study of posture and emotional weight."
+  },
+  {
+    "galleryID": "nude",
+    "categoryLabel": "The Raw Form",
+    "categoryDesc": "A study of anatomy, vulnerability, and the human landscape.",
+    "title": "Dune Form",
+    "image": "/asset/topless-on-sand.jpg",
+    "description": "Finding harmony between the human form and the shifting sands."
+  },
+  {
+    "galleryID": "nude",
+    "categoryLabel": "The Raw Form",
+    "categoryDesc": "A study of anatomy, vulnerability, and the human landscape.",
+    "title": "Threshold",
+    "image": "/asset/woman-topless-bed.jpg",
+    "description": "Capturing the soft light of transition."
+  },
+  {
+    "galleryID": "nude",
+    "categoryLabel": "The Raw Form",
+    "categoryDesc": "A study of anatomy, vulnerability, and the human landscape.",
+    "title": "Coastal Highlight",
+    "image": "/asset/woman-beach-highlight.jpg",
+    "description": "The sun defining form against the horizon."
   }
 ]
