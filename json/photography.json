@@ -2,29 +2,33 @@
   {
     "title": "Industrial Resurgence",
     "category": "Building Documentation",
+    "galleryID": "building",
     "image": "/asset/Kelsie-Photo3.jpg",
     "description": "Documenting the historic transformation and industrial soul of Strong Bonds Resilience.",
-    "link": "#"
+    "link": "/photography/gallery.html?id=building"
   },
   {
     "title": "Ethereal Obscura",
     "category": "Fine Art Silhouette",
+    "galleryID": "ethereal",
     "image": "/asset/Kelsie-Photo_6.jpg",
     "description": "An exploration of shadow and light, capturing the spirit through veiled form.",
-    "link": "#"
+    "link": "/photography/gallery.html?id=ethereal"
   },
   {
     "title": "Environmental Portraiture",
     "category": "Portraits",
-    "image": "/asset/Kelsie-Photo_3.jpg",
+    "galleryID": "portraits",
+    "image": "/asset/Kelsie-Photo_4.jpg",
     "description": "Raw, emotive connections captured within the unique landscapes of the Borderplex.",
-    "link": "#"
+    "link": "/photography/gallery.html?id=portraits"
   },
   {
     "title": "Sensory Narratives",
     "category": "Conceptual",
+    "galleryID": "sensory",
     "image": "/asset/Kelsie-Photo_5.jpg",
     "description": "Visual storytelling that moves beyond sight to capture lived experience.",
-    "link": "#"
+    "link": "/photography/gallery.html?id=sensory"
   }
 ]
