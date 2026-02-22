@@ -111,12 +111,11 @@ img {
 /* 5. WORK GRID SYSTEM */
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default 3 columns for desktop */
+    grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
     width: 100%;
 }
 
-/* Special class for Catalog/Main Hubs */
 .photography-grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
@@ -134,7 +133,6 @@ img {
     color: inherit;
 }
 
-/* Makes entire card clickable for Photography categories */
 .work-card:hover {
     border-color: var(--accent);
     transform: translateY(-10px);
@@ -184,7 +182,7 @@ img {
     line-height: 1.5;
 }
 
-/* 8. Warning Overlay Styles */
+/* 8. CONTENT GATE (NC-17 INTERSTITIAL) */
 #content-gate {
     position: fixed;
     top: 0; left: 0;
@@ -197,13 +195,14 @@ img {
     z-index: 2000;
     text-align: center;
     padding: 2rem;
+    transition: opacity 0.4s ease; /* Supports smooth fade-out from JS */
 }
 
 .gate-box {
     max-width: 500px;
     border: 1px solid var(--accent);
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(10, 10, 10, 0.98);
 }
 
 .gate-box h2 { color: var(--accent); margin-bottom: 1rem; }
@@ -219,11 +218,12 @@ img {
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    margin-bottom: 1rem;
 }
 
 .enter-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
 
-/* 8. FOOTER */
+/* 9. FOOTER */
 .resident-footer, .bottom-footer {
     width: 100%;
     text-align: center;
@@ -240,7 +240,7 @@ img {
     text-decoration: none;
 }
 
-/* 9. RESPONSIVE ENGINE */
+/* 10. ANIMATIONS & RESPONSIVE */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -255,4 +255,5 @@ img {
     .content-area, .main-content { padding: 3rem 5% !important; }
     .work-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hub-header h1 { font-size: 2rem; }
+    .gate-box { padding: 2rem; width: 95%; }
 }
