@@ -2,36 +2,40 @@
 **Live Site:** [https://kelsiestark.com](https://kelsiestark.com)
 
 ## 🖋️ The Vision
-A high-performance, minimalist digital sanctuary designed to showcase the intersection of trauma, resilience, and liberation. This portfolio serves as the professional home for Kelsie E. Stark's visual and written narratives.
+A high-performance digital sanctuary showcasing the intersection of trauma, resilience, and liberation. This portfolio is data-driven, allowing for seamless content updates via JSON.
 
 ## 🛠️ Architecture
-This site is built with a **Data-Driven Engine**. It uses a "Hub and Spoke" model where one page can represent infinite galleries.
+The site uses a "Hub and Spoke" model. A single gallery page dynamically renders content based on URL parameters.
 
-- **Root Structure:** All core folders (`/json`, `/java`, `/css`, `/asset`) reside at the top level for custom domain stability.
-- **Dynamic Photography System:** - `photography.json`: Controls the "Doors" (the main gallery categories).
-  - `catalog.json`: The "Master List" containing every individual photo.
-  - `gallery.html` & `gallery.js`: The engine that filters and displays photos based on the category clicked.
-- **Poetry Engine:** Powered by `/java/books.js` and `/json/books.json`.
-- **Hosting:** Deployed via GitHub Pages with a custom CNAME configuration and `.nojekyll` bypass.
+- **Photography Engine:** - `photography.json`: Controls the "Doors" (main categories) on the Hub page.
+  - `catalog.json`: The Master List of all individual works.
+  - `gallery.js`: Filters content and manages the **Sensitive Content Gate**.
+- **Poetry Engine:** Powered by `books.js` and `books.json`.
+- **Sensitive Content Logic:** Any gallery with the ID `nude` automatically triggers an NC-17 interstitial warning and appends a "Philosophy of Form" artistic statement.
+
+
 
 ## 🚀 Maintenance Guide
 
-### To Add a New Book:
-1. Upload the cover image to `/asset/book/`.
-2. Open `/json/books.json` and add the new entry.
-
-### To Add a New Photography Category:
-1. Upload a representative image to `/asset/`.
-2. Add a new entry to `/json/photography.json`. 
-3. Assign it a unique `galleryID` (e.g., `"galleryID": "new-style"`).
-
-### To Add Photos to an Existing Gallery:
-1. Upload images to the `/asset/` folder.
+### To Add Photos to a Gallery:
+1. Upload images to `/asset/`.
 2. Open `/json/catalog.json`.
-3. Add an entry for each photo. **Crucial:** Ensure the `galleryID` matches the category you want it to appear in (e.g., `portraits`, `ethereal`, `building`).
+3. Create a new entry. Ensure the `galleryID` matches the intended category (e.g., `portraits`, `sensory`, `nude`).
+
+### To Add a New Gallery "Door":
+1. Upload a lead image to `/asset/`.
+2. Add an entry to `/json/photography.json`.
+3. Set a unique `galleryID`. If the content is adult-oriented, use the ID `nude` to trigger the protection gate.
+
+### Troubleshooting "Ghosts in the Machine":
+- **Image not loading?** Check for case-sensitivity (GitHub prefers lowercase `.jpg`).
+- **"Curating the collection" stuck?** Check for a missing comma or bracket in your JSON files.
+- **Old images showing?** Use a "Cache Buster" by adding `?v=1` to the end of the image path in the JSON.
+
+
 
 ## 🤝 The Connection
-This project features a permanent backlink to **Strong Bonds Resilience**, representing a shared commitment to survivor advocacy and veteran support within the El Paso Borderplex.
+This project features a permanent backlink to **Strong Bonds Resilience**, representing a shared commitment to survivor advocacy within the El Paso Borderplex.
 
 ---
 *Hand-coded with purpose by the Coffee & Connections El Paso Tech Team (2026).*
