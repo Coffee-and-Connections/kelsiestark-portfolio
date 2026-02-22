@@ -64,3 +64,69 @@
     "description": "Editorial feature showcasing visual storytelling."
   }
 ]
+[
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "Stardust",
+    "image": "/asset/stars-on-face.jpg",
+    "description": "A study of celestial ornamentation and piercing gaze."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Botanical Blanket",
+    "image": "/asset/leaf-blanket.jpg",
+    "description": "Exploring tactile connection with organic textures."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Compelled Form",
+    "image": "/asset/rolledup-woman.jpg",
+    "description": "An intimate study of vulnerability and structural posture."
+  },
+  {
+    "galleryID": "intimacy",
+    "categoryLabel": "The Intimacy of Being",
+    "categoryDesc": "Exploring the raw vulnerability of connection.",
+    "title": "Soul Gaze",
+    "image": "/asset/intament-portriate.jpg",
+    "description": "Capturing the unspoken gravity of a single moment."
+  },
+  {
+    "galleryID": "publications",
+    "categoryLabel": "Poetic Publications",
+    "categoryDesc": "Featured works and literary press.",
+    "title": "Malvie Editorial II",
+    "image": "/asset/french-magazine-2.jpg",
+    "description": "Extended editorial feature: Study of form and shadow."
+  },
+  {
+    "galleryID": "publications",
+    "categoryLabel": "Poetic Publications",
+    "categoryDesc": "Featured works and literary press.",
+    "title": "Malvie Editorial III",
+    "image": "/asset/french-magazine-3.jpg",
+    "description": "Extended editorial feature: Geometric human composition."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Organic Harvest I",
+    "image": "/asset/carrots-down-pants.jpg",
+    "description": "A conceptual exploration of growth, fertility, and the body."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Organic Harvest II",
+    "image": "/asset/carrots-on-back.jpg",
+    "description": "The weight of nature: A conceptual postural study."
+  }
+]
