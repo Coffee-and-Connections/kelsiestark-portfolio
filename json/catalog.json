@@ -40,6 +40,14 @@
     "description": "Contemplative portraiture by the sea."
   },
   {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "Stardust",
+    "image": "/asset/stars-on-face.jpg",
+    "description": "A study of celestial ornamentation and piercing gaze."
+  },
+  {
     "galleryID": "intimacy",
     "categoryLabel": "The Intimacy of Being",
     "categoryDesc": "Exploring the raw vulnerability of connection.",
@@ -48,30 +56,20 @@
     "description": "A study on the strength of human connection."
   },
   {
+    "galleryID": "intimacy",
+    "categoryLabel": "The Intimacy of Being",
+    "categoryDesc": "Exploring the raw vulnerability of connection.",
+    "title": "Soul Gaze",
+    "image": "/asset/intament-portriate.jpg",
+    "description": "Capturing the unspoken gravity of a single moment."
+  },
+  {
     "galleryID": "sensory",
     "categoryLabel": "Sensory Narratives",
     "categoryDesc": "Visual storytelling moving beyond sight.",
     "title": "Internal Sight",
     "image": "/asset/blindfolded-couple.jpg",
     "description": "Exploring sensory experience through conceptual portraiture."
-  },
-  {
-    "galleryID": "publications",
-    "categoryLabel": "Poetic Publications",
-    "categoryDesc": "Featured works and literary press.",
-    "title": "French Magazine Feature",
-    "image": "/asset/french-magazine.jpg",
-    "description": "Editorial feature showcasing visual storytelling."
-  }
-]
-[
-  {
-    "galleryID": "portraits",
-    "categoryLabel": "Environmental Portraiture",
-    "categoryDesc": "Emotive connections within unique landscapes.",
-    "title": "Stardust",
-    "image": "/asset/stars-on-face.jpg",
-    "description": "A study of celestial ornamentation and piercing gaze."
   },
   {
     "galleryID": "sensory",
@@ -90,12 +88,28 @@
     "description": "An intimate study of vulnerability and structural posture."
   },
   {
-    "galleryID": "intimacy",
-    "categoryLabel": "The Intimacy of Being",
-    "categoryDesc": "Exploring the raw vulnerability of connection.",
-    "title": "Soul Gaze",
-    "image": "/asset/intament-portriate.jpg",
-    "description": "Capturing the unspoken gravity of a single moment."
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Organic Harvest I",
+    "image": "/asset/carrots-down-pants.jpg",
+    "description": "A conceptual exploration of growth, fertility, and the body."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
+    "title": "Organic Harvest II",
+    "image": "/asset/carrots-on-back.jpg",
+    "description": "The weight of nature: A conceptual postural study."
+  },
+  {
+    "galleryID": "publications",
+    "categoryLabel": "Poetic Publications",
+    "categoryDesc": "Featured works and literary press.",
+    "title": "French Magazine Feature",
+    "image": "/asset/french-magazine.jpg",
+    "description": "Editorial feature showcasing visual storytelling."
   },
   {
     "galleryID": "publications",
@@ -112,21 +126,5 @@
     "title": "Malvie Editorial III",
     "image": "/asset/french-magazine-3.jpg",
     "description": "Extended editorial feature: Geometric human composition."
-  },
-  {
-    "galleryID": "sensory",
-    "categoryLabel": "Sensory Narratives",
-    "categoryDesc": "Visual storytelling moving beyond sight.",
-    "title": "Organic Harvest I",
-    "image": "/asset/carrots-down-pants.jpg",
-    "description": "A conceptual exploration of growth, fertility, and the body."
-  },
-  {
-    "galleryID": "sensory",
-    "categoryLabel": "Sensory Narratives",
-    "categoryDesc": "Visual storytelling moving beyond sight.",
-    "title": "Organic Harvest II",
-    "image": "/asset/carrots-on-back.jpg",
-    "description": "The weight of nature: A conceptual postural study."
   }
 ]
