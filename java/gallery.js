@@ -3,22 +3,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('gallery-title');
     const subtitle = document.getElementById('gallery-subtitle');
 
-    // 1. Get the ID from the URL (e.g., 'ethereal')
+    // 1. Get the ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const targetID = urlParams.get('id');
 
     if (!targetID) {
-        window.location.href = '/photography/index.html'; // Send them back if no ID
+        window.location.href = '/photography/index.html';
         return;
     }
 
-    // 2. Fetch the MASTER list of all photos
-    // We'll use a new file called catalog.json for the full list
+    // NEW: NC-17 Content Gate Logic
+    if (targetID.toLowerCase() === 'nude') {
+        const gate = document.createElement('div');
+        gate.id = 'content-gate';
+        gate.innerHTML = `
+            <div class="gate-box">
+                <span class="category-tag">Sensitive Content</span>
+                <h2>The Raw Form</h2>
+                <p>This collection contains artistic nude photography exploring the human landscape and vulnerability. By entering, you confirm you are of legal adult age and wish to view this fine art content.</p>
+                <button class="enter-btn" id="gate-entry">Enter Gallery</button>
+                <br><br>
+                <a href="/photography/index.html" style="color: var(--text-muted); text-decoration:none; font-size: 0.7rem; letter-spacing:1px;">Return to Collections</a>
+            </div>
+        `;
+        document.body.appendChild(gate);
+
+        // Remove gate when button is clicked
+        document.getElementById('gate-entry').addEventListener('click', () => {
+            gate.style.opacity = '0';
+            setTimeout(() => gate.remove(), 400); // Smooth fade out
+        });
+    }
+
+    // 2. Fetch the MASTER list
     fetch('/json/catalog.json')
         .then(res => res.json())
         .then(data => {
-            // 3. Filter data for matches
-            // This forces both sides to lowercase so "Sensory" matches "sensory"
+            // 3. Filter data
             const matches = data.filter(item => item.galleryID.toLowerCase() === targetID.toLowerCase());
 
             if (matches.length > 0) {
