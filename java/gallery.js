@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             // 3. Filter data for matches
-            const matches = data.filter(item => item.galleryID === targetID);
+            // This forces both sides to lowercase so "Sensory" matches "sensory"
+            const matches = data.filter(item => item.galleryID.toLowerCase() === targetID.toLowerCase());
 
             if (matches.length > 0) {
                 grid.innerHTML = '';
