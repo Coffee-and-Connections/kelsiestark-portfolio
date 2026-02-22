@@ -1,0 +1,42 @@
+[
+  {
+    "galleryID": "building",
+    "categoryLabel": "Industrial Resurgence",
+    "categoryDesc": "Documenting the historic transformation and industrial soul of Strong Bonds Resilience.",
+    "title": "The Foundation",
+    "image": "/asset/kelsie_stark_img.jpeg",
+    "description": "Initial documentation and architectural study."
+  },
+  {
+    "galleryID": "ethereal",
+    "categoryLabel": "Ethereal Obscura",
+    "categoryDesc": "An exploration of shadow and light, capturing the spirit through veiled form.",
+    "title": "Spirit Veiled",
+    "image": "/asset/silhouette.jpg",
+    "description": "Fine art silhouette study exploring form and shadow."
+  },
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Raw, emotive connections captured within the unique landscapes of the Borderplex.",
+    "title": "Desert Solitude",
+    "image": "/asset/white-sands.jpg",
+    "description": "Portraiture captured amidst the dunes of the white sands."
+  },
+  {
+    "galleryID": "intimacy",
+    "categoryLabel": "The Intimacy of Being",
+    "categoryDesc": "Exploring the raw vulnerability and strength found in human connection.",
+    "title": "Vulnerability",
+    "image": "/asset/couple-embrace.jpg",
+    "description": "A study on the strength of human connection."
+  },
+  {
+    "galleryID": "sensory",
+    "categoryLabel": "Sensory Narratives",
+    "categoryDesc": "Visual storytelling that moves beyond sight to capture lived experience.",
+    "title": "Internal Sight",
+    "image": "/asset/blindfolder-couple.jpg",
+    "description": "Exploring sensory experience through conceptual portraiture."
+  }
+]
