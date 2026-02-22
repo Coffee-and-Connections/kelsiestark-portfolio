@@ -2,7 +2,7 @@
   {
     "galleryID": "building",
     "categoryLabel": "Industrial Resurgence",
-    "categoryDesc": "Documenting the historic transformation and industrial soul of Strong Bonds Resilience.",
+    "categoryDesc": "Documenting the historic transformation of Strong Bonds Resilience.",
     "title": "The Foundation",
     "image": "/asset/kelsie_stark_img.jpeg",
     "description": "Initial documentation and architectural study."
@@ -10,23 +10,39 @@
   {
     "galleryID": "ethereal",
     "categoryLabel": "Ethereal Obscura",
-    "categoryDesc": "An exploration of shadow and light, capturing the spirit through veiled form.",
+    "categoryDesc": "An exploration of shadow and light.",
     "title": "Spirit Veiled",
     "image": "/asset/silhouette.jpg",
-    "description": "Fine art silhouette study exploring form and shadow."
+    "description": "Fine art silhouette study."
   },
   {
     "galleryID": "portraits",
     "categoryLabel": "Environmental Portraiture",
-    "categoryDesc": "Raw, emotive connections captured within the unique landscapes of the Borderplex.",
+    "categoryDesc": "Emotive connections within unique landscapes.",
     "title": "Desert Solitude",
     "image": "/asset/white-sands.jpg",
-    "description": "Portraiture captured amidst the dunes of the white sands."
+    "description": "Portraiture captured amidst the dunes."
+  },
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "Nature's Texture",
+    "image": "/asset/female-face-on-leaf.jpg",
+    "description": "A study of organic form and human presence."
+  },
+  {
+    "galleryID": "portraits",
+    "categoryLabel": "Environmental Portraiture",
+    "categoryDesc": "Emotive connections within unique landscapes.",
+    "title": "The Horizon Watcher",
+    "image": "/asset/woman-by-sea.jpg",
+    "description": "Contemplative portraiture by the sea."
   },
   {
     "galleryID": "intimacy",
     "categoryLabel": "The Intimacy of Being",
-    "categoryDesc": "Exploring the raw vulnerability and strength found in human connection.",
+    "categoryDesc": "Exploring the raw vulnerability of connection.",
     "title": "Vulnerability",
     "image": "/asset/couple-embrace.jpg",
     "description": "A study on the strength of human connection."
@@ -34,9 +50,17 @@
   {
     "galleryID": "sensory",
     "categoryLabel": "Sensory Narratives",
-    "categoryDesc": "Visual storytelling that moves beyond sight to capture lived experience.",
+    "categoryDesc": "Visual storytelling moving beyond sight.",
     "title": "Internal Sight",
     "image": "/asset/blindfolded-couple.jpg",
     "description": "Exploring sensory experience through conceptual portraiture."
+  },
+  {
+    "galleryID": "publications",
+    "categoryLabel": "Poetic Publications",
+    "categoryDesc": "Featured works and literary press.",
+    "title": "French Magazine Feature",
+    "image": "/asset/french-magazine.jpg",
+    "description": "Editorial feature showcasing visual storytelling."
   }
 ]
