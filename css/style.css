@@ -195,7 +195,7 @@ img {
     z-index: 2000;
     text-align: center;
     padding: 2rem;
-    transition: opacity 0.4s ease; /* Supports smooth fade-out from JS */
+    transition: opacity 0.4s ease;
 }
 
 .gate-box {
@@ -223,7 +223,48 @@ img {
 
 .enter-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
 
-/* 9. FOOTER */
+/* 9. ARTISTIC STATEMENT (DYNAMIC FOOTER) */
+.artistic-statement {
+    margin: 6rem auto 2rem;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.statement-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin-bottom: 4rem;
+    opacity: 0.5;
+}
+
+.statement-content h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.statement-content p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.artist-signature {
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+
+/* 10. FOOTER */
 .resident-footer, .bottom-footer {
     width: 100%;
     text-align: center;
@@ -240,7 +281,7 @@ img {
     text-decoration: none;
 }
 
-/* 10. ANIMATIONS & RESPONSIVE */
+/* 11. ANIMATIONS & RESPONSIVE */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -256,4 +297,5 @@ img {
     .work-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hub-header h1 { font-size: 2rem; }
     .gate-box { padding: 2rem; width: 95%; }
+    .statement-content p { font-size: 1rem; }
 }
