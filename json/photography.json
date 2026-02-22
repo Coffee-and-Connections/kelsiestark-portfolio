@@ -38,5 +38,13 @@
     "image": "/asset/blindfolded-couple.jpg",
     "description": "Visual storytelling that moves beyond sight to capture lived experience.",
     "link": "/photography/gallery.html?id=sensory"
+  },
+  {
+    "title": "Poetic Publications",
+    "category": "Press & Features",
+    "galleryID": "publications",
+    "image": "/asset/french-magazine.jpg",
+    "description": "A collection of featured works and literary contributions.",
+    "link": "/photography/gallery.html?id=publications"
   }
 ]
