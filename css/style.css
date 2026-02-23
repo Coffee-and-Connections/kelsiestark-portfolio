@@ -400,3 +400,60 @@ img {
         width: 95%;
     }
 }
+
+/* =========================================
+    14. HERO & HOME PAGE SPECIFIC STYLES
+   ========================================= */
+
+.hero-center {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.intro h1 {
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    letter-spacing: 10px;
+    margin: 1rem 0;
+    color: var(--text-main);
+}
+
+.tagline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--accent);
+}
+
+.voice {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Fix for the 'enter-btn' not showing as a gold button */
+.enter-btn {
+    background: var(--accent);
+    color: #000;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
