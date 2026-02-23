@@ -305,45 +305,41 @@ img {
    ========================================= */
 
 #contact-kelsie {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.02);
+    max-width: 600px; /* Centers and constrains the form width */
+    margin: 0 auto 4rem; /* Centers the block and adds bottom spacing */
+    background: rgba(255, 255, 255, 0.03); /* Subtle dark texture */
     padding: 3rem;
     border: 1px solid var(--border);
     border-radius: 4px;
 }
 
-#contact-kelsie h2 {
-    color: var(--accent);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    text-align: left; /* Keeps labels aligned left within the centered form */
 }
 
 .form-group label {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    color: var(--accent); /* Gold labels */
+    margin-bottom: 0.8rem;
 }
 
-/* Styling Inputs, Select, and Textarea to match the Dark Theme */
+/* Styling Inputs, Select, and Textarea */
 .form-group input, 
 .form-group select, 
 .form-group textarea {
-    background: rgba(0, 0, 0, 0.5);
+    background: #000;
     border: 1px solid var(--border);
     color: var(--text-main);
-    padding: 0.8rem;
+    padding: 1rem;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 2px;
+    border-radius: 0; /* Sharp architectural corners */
     transition: var(--transition);
+    width: 100%;
 }
 
 .form-group input:focus, 
@@ -351,33 +347,37 @@ img {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
-    background: rgba(212, 175, 55, 0.05); /* Very slight gold tint */
 }
 
-/* Primary Button Styling */
+/* The Submit Button */
 .btn-primary {
     width: 100%;
     background: var(--accent);
     color: #000;
-    padding: 1rem;
+    padding: 1.2rem;
     border: none;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 3px;
     cursor: pointer;
     transition: var(--transition);
-    margin-top: 1rem;
 }
 
 .btn-primary:hover {
     filter: brightness(1.2);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-/* Secondary Button for Calendly Link */
+/* The Booking Section Styling */
+#calendar-booking {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .btn-secondary {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.5rem;
     border: 1px solid var(--accent);
     color: var(--accent);
     text-decoration: none;
@@ -386,7 +386,6 @@ img {
     font-weight: bold;
     letter-spacing: 2px;
     transition: var(--transition);
-    margin-top: 1rem;
 }
 
 .btn-secondary:hover {
@@ -394,20 +393,10 @@ img {
     color: #000;
 }
 
-#calendar-booking {
-    text-align: center;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-}
-
-#calendar-booking h3 {
-    margin-bottom: 1rem;
-}
-
-/* Responsive adjustment for Mobile Forms */
+/* 13. RESPONSIVE MOBILE TWEAKS */
 @media (max-width: 768px) {
     #contact-kelsie {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
+        width: 95%;
     }
 }
