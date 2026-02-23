@@ -1,0 +1,47 @@
+<section id="contact-kelsie">
+    <h2>Inquiries & Commissions</h2>
+    <p>For photography bookings, literary media requests, or general inquiries, please use the portal below.</p>
+
+    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" required placeholder="Full Name">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="_replyto" required placeholder="email@address.com">
+        </div>
+
+        <div class="form-group">
+            <label>Inquiry Type</label>
+            <select name="service-type" required>
+                <option value="" disabled selected>Select an option...</option>
+                <option value="photo-booking">Photography Session / Commission</option>
+                <option value="author-media">Author Media / Book Inquiry</option>
+                <option value="speaking">Speaking Engagements</option>
+                <option value="other">General Inquiries</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="date-field">
+            <label>Requested Date (Optional)</label>
+            <input type="date" name="event-date">
+        </div>
+
+        <div class="form-group">
+            <label>Details</label>
+            <textarea name="message" rows="6" placeholder="Tell me about your project or vision..."></textarea>
+        </div>
+
+        <input type="hidden" name="_next" value="https://your-github-username.github.io/thanks.html">
+        
+        <button type="submit" class="btn-primary">Submit Request</button>
+    </form>
+</section>
+
+<section id="calendar-booking">
+    <h3>Book a Creative Consultation</h3>
+    <p>Prefer to chat? Schedule a 15-minute discovery call directly on my calendar.</p>
+    <a href="https://calendly.com/kelsiestark" class="btn-secondary">View Availability</a>
+</section>
