@@ -3,86 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commission | Kelsie E. Stark</title>
+    <title>Kelsie E. Stark | Fine Art & Poetry</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body class="gallery-theme" style="background-color: #0a0a0a;">
+<body class="gallery-theme">
 
     <nav class="side-nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="poetry/index.html">Poetry</a>
         <a href="photography/index.html">Photography</a>
-        <a href="contact.html" class="active">Commission</a>
+        <a href="contact.html">Commission</a>
     </nav>
 
     <main class="main-content">
         
-        <header class="hub-header">
-            <a href="index.html" style="text-decoration: none; color: inherit;">
-                <span class="category-tag">Kelsie E. Stark | Creative Commissions</span>
-            </a>
-            <h1>Connect & Collaborate</h1>
-            <p class="subtitle">Photography sessions, literary media requests, and creative consultations.</p>
-        </header>
-
-        <section id="contact-kelsie">
-            <form action="https://formspree.io/f/xjgepajn" method="POST">
-                <input type="text" name="_gotcha" style="display:none">
-
-                <div class="form-group">
-                    <label>Professional Name</label>
-                    <input type="text" name="name" required placeholder="Full Name">
+        <section class="hero-center">
+            <div class="intro">
+                <span class="category-tag">Veteran • Artist • Storyteller</span>
+                <a href="contact.html" style="text-decoration: none; color: inherit;">
+                    <h1>Kelsie E. Stark</h1>
+                </a>
+                <p class="subtitle">Capturing the raw resilience of the human spirit through the lens and the pen.</p>
+                <div class="cta-group" style="margin-top: 2rem;">
+                    <a href="photography/index.html" class="btn-secondary" style="margin-right: 1rem;">View Visuals</a>
+                    <a href="poetry/index.html" class="btn-secondary">Read Narratives</a>
                 </div>
-
-                <div class="form-group">
-                    <label>Direct Email</label>
-                    <input type="email" name="_replyto" required placeholder="email@address.com">
-                </div>
-
-                <div class="form-group">
-                    <label>Inquiry Type</label>
-                    <select name="service-type" required>
-                        <option value="" disabled selected>Select an option...</option>
-                        <option value="photography">Photography Commission</option>
-                        <option value="literary">Author Media / Book Inquiry</option>
-                        <option value="speaking">Speaking Engagement</option>
-                        <option value="other">General Inquiry</option>
-                    </select>
-                </div>
-
-                <div class="form-group" id="date-field">
-                    <label>Requested Date (Optional)</label>
-                    <input type="date" name="event-date">
-                </div>
-
-                <div class="form-group">
-                    <label>Project Narrative</label>
-                    <textarea name="message" rows="6" placeholder="Describe your vision, narrative, or project requirements..."></textarea>
-                </div>
-
-                <input type="hidden" name="_next" value="https://kelsiestark.github.io/thanks.html">
-                
-                <button type="submit" class="btn-primary">Book with Kelsie</button>
-            </form>
+            </div>
         </section>
 
-        <section id="calendar-booking">
+        <section id="about" class="artistic-statement" style="text-align: left; display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="asset/kelsie_stark_img.jpeg" alt="Kelsie E. Stark" style="width: 100%; border-radius: 4px; filter: grayscale(1);">
+            </div>
+            <div style="flex: 1.5; min-width: 300px;">
+                <h2 style="color: var(--accent); margin-bottom: 1.5rem;">The Art of Becoming</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Kelsie E. Stark is a medically retired Army Veteran, fine-art photographer, and poet based in El Paso, Texas. 
+                </p>
+                <p style="color: var(--text-muted);">
+                    Her work explores the intersection of trauma and liberation, using visual and written narratives to document the strength found in vulnerability.
+                </p>
+            </div>
+        </section>
+
+        <section class="artistic-statement">
             <div class="statement-divider"></div>
-            <h3>Direct Availability</h3>
-            <p class="subtitle">Prefer a voice consultation? Schedule a 15-minute call directly on my calendar.</p>
-            <a href="https://calendly.com/kelsiestark" class="btn-secondary" style="margin-top: 2rem;">View Schedule</a>
+            <div class="statement-content">
+                <h3>Secure the Vision</h3>
+                <p>Currently accepting select photography commissions and literary inquiries for 2026.</p>
+                <a href="contact.html" class="btn-primary" style="display: inline-block; margin-top: 2rem; text-decoration: none; width: auto; padding: 1rem 3rem;">
+                    Book with Kelsie
+                </a>
+                <span class="artist-signature">El Paso & Worldwide</span>
+            </div>
         </section>
 
     </main>
 
     <footer class="bottom-footer">
-        <p>Direct Correspondence: <a href="mailto:kelsie@operationresiliencecorp.com" style="color: var(--accent); text-decoration: none;">kelsie@operationresiliencecorp.com</a></p>
-        <p style="margin-top: 1rem; opacity: 0.5;">&copy; 2026 Kelsie E. Stark | Resident Creative at Strong Bonds Resilience</p>
+        <p>© 2026 Kelsie E. Stark | Resident Creative at Strong Bonds Resilience</p>
     </footer>
 
 </body>
