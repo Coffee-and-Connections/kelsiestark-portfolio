@@ -3,68 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelsie E. Stark | Fine Art & Poetry</title>
+    <title>Contact & Commissions | Kelsie E. Stark</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="gallery-theme">
 
     <nav class="side-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="poetry/index.html">Poetry</a>
-        <a href="photography/index.html">Photography</a>
-        <a href="contact.html">Commission</a>
+        <div class="nav-brand">KES</div>
+        <a href="/index.html">Home</a>
+        <a href="/poetry/index.html">Poetry</a>
+        <a href="/photography/index.html">Photography</a>
+        <a href="/contact.html" class="active">Commission</a>
     </nav>
 
-    <main class="main-content">
+    <main class="content-area">
         
-        <section class="hero-center">
-            <div class="intro">
-                <span class="category-tag">Veteran • Artist • Storyteller</span>
-                <a href="contact.html" style="text-decoration: none; color: inherit;">
-                    <h1>Kelsie E. Stark</h1>
-                </a>
-                <p class="subtitle">Capturing the raw resilience of the human spirit through the lens and the pen.</p>
-                <div class="cta-group" style="margin-top: 2rem;">
-                    <a href="photography/index.html" class="btn-secondary" style="margin-right: 1rem;">View Visuals</a>
-                    <a href="poetry/index.html" class="btn-secondary">Read Narratives</a>
+        <header class="hub-header">
+            <span class="category-tag">Secure the Vision</span>
+            <h1>Inquiry & Commission</h1>
+            <p class="subtitle">Currently accepting select photography commissions and literary inquiries for 2026.</p>
+        </header>
+
+        <section class="work-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+            
+            <div class="work-card" style="border: none; background: transparent;">
+                <div class="work-media" style="aspect-ratio: 1/1; border-radius: 4px;">
+                    <img src="/asset/kelsie_stark_img.jpeg" alt="Kelsie E. Stark" style="filter: grayscale(1);">
+                </div>
+                <div class="work-info" style="text-align: left; padding: 1.5rem 0;">
+                    <h2 style="font-family: 'Playfair Display'; color: var(--accent);">The Art of Becoming</h2>
+                    <p style="margin-bottom: 1rem;">Kelsie E. Stark is a medically retired Army Veteran, fine-art photographer, and poet based in El Paso, Texas.</p>
+                    <p>Her work explores the intersection of trauma and liberation, documenting the strength found in vulnerability.</p>
                 </div>
             </div>
-        </section>
 
-        <section id="about" class="artistic-statement" style="text-align: left; display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="asset/kelsie_stark_img.jpeg" alt="Kelsie E. Stark" style="width: 100%; border-radius: 4px; filter: grayscale(1);">
-            </div>
-            <div style="flex: 1.5; min-width: 300px;">
-                <h2 style="color: var(--accent); margin-bottom: 1.5rem;">The Art of Becoming</h2>
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                    Kelsie E. Stark is a medically retired Army Veteran, fine-art photographer, and poet based in El Paso, Texas. 
-                </p>
-                <p style="color: var(--text-muted);">
-                    Her work explores the intersection of trauma and liberation, using visual and written narratives to document the strength found in vulnerability.
-                </p>
-            </div>
-        </section>
+            <div class="work-card" style="padding: 2rem; background: rgba(255,255,255,0.03);">
+                <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <label style="display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--accent);">Name</label>
+                        <input type="text" name="name" required style="width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.8rem; color: white; font-family: 'Montserrat';">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--accent);">Email</label>
+                        <input type="email" name="_replyto" required style="width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.8rem; color: white; font-family: 'Montserrat';">
+                    </div>
 
-        <section class="artistic-statement">
-            <div class="statement-divider"></div>
-            <div class="statement-content">
-                <h3>Secure the Vision</h3>
-                <p>Currently accepting select photography commissions and literary inquiries for 2026.</p>
-                <a href="contact.html" class="btn-primary" style="display: inline-block; margin-top: 2rem; text-decoration: none; width: auto; padding: 1rem 3rem;">
-                    Book with Kelsie
-                </a>
-                <span class="artist-signature">El Paso & Worldwide</span>
+                    <div>
+                        <label style="display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--accent);">Inquiry Type</label>
+                        <select name="type" style="width: 100%; background: #0a0a0a; border: 1px solid var(--border); padding: 0.8rem; color: white; font-family: 'Montserrat';">
+                            <option value="photography">Photography Commission</option>
+                            <option value="poetry">Poetry / Literary Inquiry</option>
+                            <option value="other">General Connection</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--accent);">Message</label>
+                        <textarea name="message" rows="5" required style="width: 100%; background: transparent; border: 1px solid var(--border); padding: 0.8rem; color: white; font-family: 'Montserrat'; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="enter-btn" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                </form>
             </div>
+
         </section>
 
     </main>
 
     <footer class="bottom-footer">
-        <p>© 2026 Kelsie E. Stark | Resident Creative at Strong Bonds Resilience</p>
+        <p>© 2026 Kelsie E. Stark | Resident Creative at <a href="https://connectionsep.coffee" target="_blank" style="color: var(--accent); text-decoration: none;">Strong Bonds Resilience</a></p>
     </footer>
 
 </body>
