@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('gallery-title');
     const subtitle = document.getElementById('gallery-subtitle');
 
-    // 1. Get the ID from the URL (e.g., kelsiestark.com/gallery.html?id=nude)
     const urlParams = new URLSearchParams(window.location.search);
     const targetID = urlParams.get('id');
 
-    // Redirect if no ID is present
     if (!targetID) {
         window.location.href = '/photography/index.html';
         return;
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cleanID = targetID.toLowerCase();
 
-    // 2. NC-17 CONTENT GATE (Triggers only for 'nude' category)
+    // RESTORE NC-17 CONTENT GATE
     if (cleanID === 'nude') {
         const gate = document.createElement('div');
         gate.id = 'content-gate';
@@ -42,22 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. FETCH & FILTER DATA
+    // Use absolute path for the fetch
     fetch('/json/catalog.json')
-        .then(res => {
-            if (!res.ok) throw new Error('Catalog not found');
-            return res.json();
-        })
+        .then(res => res.json())
         .then(data => {
             const matches = data.filter(item => item.galleryID.toLowerCase() === cleanID);
 
             if (matches.length > 0) {
-                // Clear the loader and sync headers
                 grid.innerHTML = '';
                 title.innerText = matches[0].categoryLabel || "Collection";
                 subtitle.innerText = matches[0].categoryDesc || "A curated selection of visual narratives.";
 
-                // Build the Image Cards
                 matches.forEach(photo => {
                     const card = document.createElement('article');
                     card.className = 'work-card';
@@ -73,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     grid.appendChild(card);
                 });
 
-                // 4. DYNAMIC ARTISTIC STATEMENT (Appends only for 'nude' category)
+                // RESTORE ARTISTIC STATEMENT
                 if (cleanID === 'nude') {
                     const statement = document.createElement('div');
                     statement.className = 'artistic-statement';
@@ -81,19 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <hr class="statement-divider">
                         <div class="statement-content">
                             <h3>The Philosophy of Form</h3>
-                            <p>This collection serves as a visual dialogue between the human landscape and the architecture of resilience. In these frames, the body is not an object of gaze, but a vessel of history, trauma, and eventual liberation. By stripping away the external, we find the raw, unfiltered truth of our existence—a sanctuary where vulnerability is the highest form of strength.</p>
+                            <p>This collection serves as a visual dialogue between the human landscape and the architecture of resilience...</p>
                             <span class="artist-signature">Kelsie E. Stark</span>
                         </div>
                     `;
                     grid.after(statement);
                 }
-
-            } else {
-                grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 4rem; opacity: 0.5;">Collection coming soon.</p>`;
             }
-        })
-        .catch(err => {
-            console.error("Gallery Error:", err);
-            grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center;">Unable to load collection at this time.</p>`;
         });
 });
