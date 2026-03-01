@@ -19,22 +19,6 @@
     "galleryID": "ethereal",
     "categoryLabel": "Ethereal Obscura",
     "categoryDesc": "An exploration of shadow and light.",
-    "title": "Primal Element",
-    "image": "/asset/woman-fire.jpg",
-    "description": "A study of heat, light, and human presence."
-  },
-  {
-    "galleryID": "ethereal",
-    "categoryLabel": "Ethereal Obscura",
-    "categoryDesc": "An exploration of shadow and light.",
-    "title": "Obscured Reflection",
-    "image": "/asset/woman-fog-mirror.jpg",
-    "description": "Exploring the boundary between clarity and haze."
-  },
-  {
-    "galleryID": "ethereal",
-    "categoryLabel": "Ethereal Obscura",
-    "categoryDesc": "An exploration of shadow and light.",
     "title": "The Unknown",
     "image": "/asset/woman-ufo.jpg",
     "description": "Conceptual exploration of light and mystery."
@@ -255,12 +239,4 @@
     "image": "/asset/woman-topless-bed.jpg",
     "description": "Capturing the soft light of transition."
   },
-  {
-    "galleryID": "nude",
-    "categoryLabel": "The Raw Form",
-    "categoryDesc": "A study of anatomy, vulnerability, and the human landscape.",
-    "title": "Coastal Highlight",
-    "image": "/asset/woman-beach-highlight.jpg",
-    "description": "The sun defining form against the horizon."
-  }
 ]
